@@ -1,0 +1,137 @@
+@use "setting/mixin" as *;
+@use "setting/calc" as *;
+
+@media screen and (min-width: 769px) {
+  .l-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--bgGray);
+    &__inner {
+      width: calc(100% - pv(40));
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      padding: pv(10) 0;
+    }
+    &__logo {
+      width: pv(200);
+
+    }
+    &__nav {
+      width: calc(100% - pv(200));
+      ul {
+        display: flex;
+        justify-content: flex-end;
+      }
+      li {
+
+      }
+      a {
+        font-size: pv(16);
+        color: var(--textBlack);
+        padding: pv(5);
+      }
+    }
+    &__hamburger {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .l-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--bgGray);
+    &__inner {
+      width: calc(100% - vw(40));
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: vw(10) 0;
+    }
+    &__logo {
+      width: vw(90);
+
+    }
+    &__nav {
+      position: fixed;
+      top: vw(60);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: calc(100vh - vw(60));
+      background-color: var(--bgGray02);
+      transform: translateX(100%);
+      transition: all 0.3s;
+      &.on {
+        transform: translateX(0);
+      }
+      ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      li {
+
+      }
+      a {
+        font-size: vw(16);
+        color: var(--textBlack);
+        padding: vw(5);
+      }
+    }
+    &__hamburger {
+      position: relative;
+      width: vw(40);
+      height: vw(40);
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-box {
+        width: vw(30);
+        height: vw(20);
+        position: relative;
+        span {
+          position: absolute;
+          display: block;
+          width: 100%;;
+          height: vw(2);
+          background-color: var(--wht);
+          transition: all 0.3s;
+          &:nth-of-type(1) {
+            top: 0;
+          }
+          &:nth-of-type(2) {
+            top: 50%;
+          }
+          &:nth-of-type(3) {
+            top: 100%;
+          }
+        }
+      }
+      &.on {
+        span {
+          &:nth-of-type(1) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+          }
+          &:nth-of-type(2) {
+            opacity: 0;
+          }
+          &:nth-of-type(3) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}

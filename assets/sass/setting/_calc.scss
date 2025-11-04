@@ -1,0 +1,24 @@
+@use "sass:math";
+
+// pv() を pxに変換（PC）
+@function pv($px) {
+  @return $px * 1px;
+}
+
+
+
+// vwの記述（SP）
+$base-window-width-sp: 375px !default;
+@function trimSp($numberSp) {
+  @if type-of($numberSp) == "number" and not unitless($numberSp) {
+    @return math.div($numberSp, ($numberSp * 0 + 1));
+  }
+  @return $numberSp;
+}
+// 任意の px 単位系を vw 単位系に置換する関数。
+@function vw($pxSp, $px2Sp: $base-window-width-sp) {
+  // @return math.div(trim($px), trim($px2)) * 100vw;
+  @return calc(#{trimSp($pxSp)}/#{trimSp($px2Sp)}* 100vw); //検証しやすいように「calc()」で出力
+}
+
+

@@ -1,0 +1,103 @@
+@use "setting/mixin" as *;
+
+.u-mt0 {
+  margin-top: 0 !important;
+}
+.u-mt10 {
+  margin-top: 10px;
+}
+.u-mt20 {
+  margin-top: 20px;
+}
+.u-mt30 {
+  margin-top: 30px;
+}
+.u-mt40 {
+  margin-top: 40px;
+}
+.u-mt50 {
+  margin-top: 50px;
+}
+.u-mt60 {
+  margin-top: 60px;
+}
+.u-mt70 {
+  margin-top: 70px;
+}
+.u-mt80 {
+  margin-top: 80px;
+}
+.u-mt90 {
+  margin-top: 90px;
+}
+.u-mt100 {
+  margin-top: 100px;
+}
+.u-mt1000 {
+  margin-top: 1000px;
+}
+.u-tal {
+  text-align: left;
+}
+.u-tac {
+  text-align: center;
+}
+.u-tac {
+  text-align: center;
+}
+.u-tal {
+  text-align: left;
+}
+.u-tar {
+  text-align: right;
+}
+.u-taj {
+  text-align: justify;
+}
+.u-tdu {
+  text-decoration: underline;
+}
+.u-indent {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+.u-fwb {
+  font-weight: bold;
+}
+//赤文字
+.u-redCol {
+  color: var(--txtRed);
+}
+
+@include sp {
+  .u-mt10 {
+    margin-top: 0.6em;
+  }
+  .u-mt20 {
+    margin-top: 1.2em;
+  }
+  .u-mt30 {
+    margin-top: 1.8em;
+  }
+  .u-mt40 {
+    margin-top: 2.4em;
+  }
+  .u-mt50 {
+    margin-top: 3em;
+  }
+  .u-mt60 {
+    margin-top: 3.6em;
+  }
+  .u-mt70 {
+    margin-top: 4.2em;
+  }
+  .u-mt80 {
+    margin-top: 4.8em;
+  }
+  .u-mt90 {
+    margin-top: 5.4em;
+  }
+  .u-mt100 {
+    margin-top: 6em;
+  }
+}

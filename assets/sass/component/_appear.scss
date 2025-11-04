@@ -1,0 +1,43 @@
+@use "setting/mixin" as *;
+@use "setting/calc" as *;
+
+.c-appear-up {
+    opacity: 0;
+    transform: translateY(pv(30));
+    transition: all 0.6s ease;
+
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.c-appear-left {
+    opacity: 0;
+    transform: translateX(pv(-30));
+    transition: all 0.6s ease;
+
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.c-appear-right {
+    opacity: 0;
+    transform: translateX(pv(30));
+    transition: all 0.6s ease;
+
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.c-appear-down {
+    opacity: 0;
+    transform: translateY(pv(-30));
+    transition: all 0.6s ease;
+
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

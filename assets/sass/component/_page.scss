@@ -1,0 +1,10 @@
+@use "setting/mixin" as *;
+@use "setting/calc" as *;
+
+@media screen and (min-width: 769px) {
+    .c-page {
+    }
+}
+
+@media screen and (max-width: 768px) {
+}

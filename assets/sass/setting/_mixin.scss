@@ -1,0 +1,124 @@
+
+/* ====================
+ SIZE SET
+==================== */
+$media-sp: 768px;
+$media-pc: 1600px;
+$sp_vw: 375;
+$pc_vw: 1400;
+
+/* ===================
+ MIXIN
+==================== */
+@mixin sp {
+  @media only screen and (max-width: $media-sp ) {
+    @content;  
+  }
+}
+@mixin pc {
+  @media only screen and (min-width: $media-sp+1 ) {
+    @content;  
+  }
+}
+
+
+
+
+
+
+@mixin flexCC {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+@mixin flexCC {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+@mixin flexSC {
+  display: flex;
+  justify-content: center;
+}
+@mixin flexSB {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flexCS {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@mixin flexCB {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flexCE {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@mixin flexEC {
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+}
+@mixin flexEE {
+  display: flex;
+  align-items:flex-end;
+  justify-content: flex-end;
+}
+@mixin btnArw {
+    content: '';
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+    transform: rotate(45deg);
+    transition: .4s;
+}
+@mixin btnCross {
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    transform: translate(-50%,0) rotate(45deg);
+    transform-origin: center;
+  }
+  &::after {
+    transform: translate(-50%,0) rotate(-45deg);
+  }
+}
+@mixin btnAcd {
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right:5%;
+    width: 12px;
+    height: 1px;
+    background: #fff;
+    transform-origin: center;
+    transition: .3s;
+  }
+  &::after {
+    transform: rotate(-90deg);
+  }
+  &.open {
+    &::after {
+      transform: rotate(0);
+    }
+  }
+}

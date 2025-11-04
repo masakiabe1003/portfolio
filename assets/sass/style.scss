@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+//setting/（変数$を管理する）
+@use "setting/color";
+@use "setting/font-family";
+@use "setting/font-size";
+@use "setting/container";
+
+//foundation/（基本の設定）
+@use "foundation/reset";
+@use "foundation/base";
+
+//component/（最小単位のパーツ）
+@use "component/btn";
+@use "component/common";
+@use "component/flex";
+@use "component/appear";
+@use "component/page";
+@use "component/slide";
+@use "component/ttl";
+@use "component/text";
+@use "component/popup";
+
+
+
+//utility/（調整用）
+@use "utility/_utility";
+
+//layout/（レイアウト部分の管理）
+@use "layout/footer";
+@use "layout/header";
+@use "layout/main";
+@use "layout/sidebar";
+
+
+
+//project/（各ページのモジュール管理） 一番多くなるはず
+// @use "project/*.scss";
+@use "project/top";
+
